@@ -1,47 +1,26 @@
 <?php
-
-/**
- * Class login
- * handles the user's login and logout process
- */
 class Login
 {
-    /**
-     * @var object The database connection
-     */
+
     private $db_connection = null;
-    /**
-     * @var array Collection of error messages
-     */
     public $errors = array();
-    /**
-     * @var array Collection of success / neutral messages
-     */
     public $messages = array();
 
-    /**
-     * the function "__construct()" automatically starts whenever an object of this class is created,
-     * you know, when you do "$login = new Login();"
-     */
     public function __construct()
     {
-        // create/read session, absolutely necessary
+
         session_start();
 
-        // check the possible login actions:
-        // if user tried to log out (happen when user clicks logout button)
+
         if (isset($_GET["logout"])) {
             $this->doLogout();
         }
-        // login via post data (if user just submitted a login form)
+
         elseif (isset($_POST["login"])) {
             $this->dologinWithPostData();
         }
     }
 
-    /**
-     * log in with post data
-     */
     private function dologinWithPostData()
     {
         // check login form contents
