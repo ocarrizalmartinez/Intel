@@ -8,10 +8,7 @@ class Login
 
     public function __construct()
     {
-
         session_start();
-
-
         if (isset($_GET["logout"])) {
             $this->doLogout();
         }
@@ -23,7 +20,6 @@ class Login
 
     private function dologinWithPostData()
     {
-        // check login form contents
         if (empty($_POST['user_name'])) {
             $this->errors[] = "El campo usuario esta vacio";
         } elseif (empty($_POST['user_password'])) {
@@ -32,7 +28,6 @@ class Login
 
           $this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-            // change character set to utf8 and check it
             if (!$this->db_connection->set_charset("utf8")) {
                 $this->errors[] = $this->db_connection->error;
             }
@@ -83,16 +78,11 @@ class Login
 
     }
 
-    /**
-     * simply return the current state of the user's login
-     * @return boolean user's login status
-     */
     public function isUserLoggedIn()
     {
         if (isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] == 1) {
             return true;
         }
-        // default return
         return false;
     }
 }
