@@ -13,7 +13,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="profile.php"><i class='glyphicon glyphicon-bookmark'></i> Intetel Comunicaciones</a>
+      <a class="navbar-brand" href="profile.php"><i class='glyphicon glyphicon-bookmark'></i> Intetel System Control</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

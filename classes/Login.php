@@ -41,7 +41,6 @@ class Login
                 $result_of_login_check = $this->db_connection->query($sql);
                 if ($result_of_login_check->num_rows == 1) {
                   $result_row = $result_of_login_check->fetch_object();
-
                     if (password_verify($_POST['user_password'], $result_row->user_password_hash) && ($result_row->privilegio==true)) {
                         $_SESSION['user_id'] = $result_row->user_id;
             						$_SESSION['firstname'] = $result_row->firstname;

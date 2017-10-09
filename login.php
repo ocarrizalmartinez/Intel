@@ -22,7 +22,7 @@ if ($login->isUserLoggedIn() == true) {
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Login</title>
+  <title>Intetel System Control</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -32,8 +32,11 @@ if ($login->isUserLoggedIn() == true) {
             <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form method="post" accept-charset="utf-8" action="login.php" name="loginform" autocomplete="off" role="form" class="form-signin">
-			<?php
-				// show potential errors / feedback (from login object)
+              <div class="text-center">
+                <span>Intetel Comunicaciones &copy</span>
+              </div>
+      <?php
+
 				if (isset($login)) {
 					if ($login->errors) {
 						?>
@@ -63,13 +66,16 @@ if ($login->isUserLoggedIn() == true) {
 				}
 				?>
                 <span id="reauth-email" class="reauth-email"></span>
+
+                <hr>
                 <input class="form-control" placeholder="Usuario" name="user_name" type="text" value="" autofocus="" required>
                 <input class="form-control" placeholder="Contraseña" name="user_password" type="password" value="" autocomplete="off" required>
                 <button type="submit" class="btn btn-lg btn-success btn-block btn-signin" name="login" id="submit">Iniciar Sesión</button>
-            </form><!-- /form -->
+            </form>
 
-        </div><!-- /card-container -->
-    </div><!-- /container -->
+        </div>
+    </div>
+    <?php include('footer.php'); ?>
   </body>
 </html>
 

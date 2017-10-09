@@ -15,13 +15,12 @@
     	$active_clientes="";
     	$active_usuarios="";
     	$active_reportes="";
-    	$title="Productos | Intetel";
+    	$title="System Control | Intetel";
   //include('session.php');
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-		<title>Intetel Center Control</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

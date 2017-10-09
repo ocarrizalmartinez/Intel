@@ -16,6 +16,7 @@
 	require_once(dirname(__FILE__).'/../html2pdf.class.php');
 
 	//Variables por GET
+	$cliente=$_GET['cliente'];
 	$atencion=$_GET['atencion'];
 	$tel1=$_GET['tel1'];
 	$empresa=$_GET['empresa'];

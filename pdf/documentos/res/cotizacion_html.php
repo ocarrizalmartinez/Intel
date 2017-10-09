@@ -50,6 +50,14 @@ table.page_footer {width: 100%; border: none; background-color: white; padding: 
 		</tr>
 	</table>
 
+  <table cellspacing="0" style="width: 100%; text-align: left; font-size: 11pt;">
+		<tr>
+			<td>
+			Cliente: <? echo $cliente;?>
+			</td>
+		</tr>
+	</table>
+
     <table cellspacing="0" style="width: 100%; text-align: left; font-size: 11pt;">
         <tr>
 

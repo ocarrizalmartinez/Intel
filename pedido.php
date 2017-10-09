@@ -32,6 +32,24 @@
 				<div class="panel-body">
 				<div class="col-md-12">
 				<form class="form-horizontal" role="form" id="datos_cotizacion">
+					<div class="form-group row">
+						<h3>Datos del cliente:</h3>
+						<label for="cliente" class="col-md-1 control-label">Nombre cliente </label>
+					  <div class="col-md-3">
+							<select class="form-control input-sm" id="cliente" name="cliente">
+									<?php
+										$sql_vendedor=mysqli_query($con,"select * from clientes order by nombre_cliente");
+										while ($rw=mysqli_fetch_array($sql_vendedor)){
+											$id_vendedor=$rw["id_cliente"];
+											$nombre_vendedor=$rw["nombre_cliente"];
+											?>
+											<option value="<?php echo $nombre_vendedor?>"><?php echo $nombre_vendedor?></option>
+											<?php
+										}
+									?>
+								</select>
+						</div>
+					</div>
 				<div class="form-group row">
 					<h3>Datos del usuario:</h3>
 				  <label for="atencion" class="col-md-1 control-label">Atendido por </label>
@@ -191,6 +209,7 @@
 
 		$("#datos_cotizacion").submit(function(){
 		  var atencion = $("#atencion").val();
+			var cliente= $("#cliente").val();
 		  var tel1 = $("#tel1").val();
 		  var empresa = $("#empresa").val();
 		  var tel2 = $("#tel2").val();
@@ -198,7 +217,7 @@
 		  var condiciones = $("#condiciones").val();
 		  var validez = $("#validez").val();
 		  var entrega = $("#entrega").val();
-		 VentanaCentrada('./pdf/documentos/cotizacion_pdf.php?atencion='+atencion+'&tel1='+tel1+'&empresa='+empresa+'&tel2='+tel2+'&email='+email+'&condiciones='+condiciones+'&validez='+validez+'&entrega='+entrega,'Cotizacion','','1024','768','true');
+		 VentanaCentrada('./pdf/documentos/cotizacion_pdf.php?atencion='+atencion+'&cliente='+cliente+'&tel1='+tel1+'&empresa='+empresa+'&tel2='+tel2+'&email='+email+'&condiciones='+condiciones+'&validez='+validez+'&entrega='+entrega,'Cotizacion','','1024','768','true');
 	 	});
 	</script>
   </body>
