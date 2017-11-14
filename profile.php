@@ -23,6 +23,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+      <link rel="stylesheet" href="css/profile.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -33,20 +34,31 @@
     <?php  include 'navbar.php';  ?>
     <div class="header agile">
     	<div class="wrap">
-    		<div class="login-main wthree">
-    			<div class="login">
-    			<h3>Bienvenido al sistema de Intetel <i>
-    				<hr>
-    				<?php echo $_SESSION['firstname']." (".$_SESSION['user_name'].")"; ?>
-          </i></h3>
-            <div class="clear"> </div>
-				        <h4></h4>
-			     </div>
-		    </div>
-        <hr>
-        <div class="login-main wthree">
-          <p class="form-control" style="align:center">El siguiente sistema fue desarrollado con la tecnologia de Alpha Systems</p>
+        <h1 class="title-pen"> perfil de usuario <span>Alpha System</span></h1>
+        <div class="user-profile">
+        	<img class="avatar" src="img/user.ico" alt="usuario" />
+            <div class="username"><?php echo $_SESSION['firstname']." (".$_SESSION['user_name'].")" ;?></div>
+          <div class="bio">
+          	administrador &  programador
+          </div>
+            <div class="description">
+            administrador de contenido y diseño web
+          </div>
+          <ul class="data">
+            <li>
+              <span class="entypo-heart"> 127</span>
+            </li>
+            <li>
+              <span class="entypo-eye"> 853</span>
+            </li>
+            <li>
+              <span class="entypo-user"> 311</span>
+            </li>
+         </ul>
         </div>
+        <br>
+        <br>
+
         <div class="login-main wthree">
           <img src="img/logo.jpg">
         </div>
