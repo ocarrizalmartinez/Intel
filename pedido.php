@@ -1,9 +1,5 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-        header("location: login.php");
-		exit;
-        }
 
 	require_once ("config/db.php");
 	require_once ("config/conexion.php");
@@ -43,7 +39,7 @@
 											$id_vendedor=$rw["id_cliente"];
 											$nombre_vendedor=$rw["nombre_cliente"];
 											?>
-											<option value="<?php echo $nombre_vendedor?>"><?php echo $nombre_vendedor?></option>
+											<option value="<?php echo "Administrdor"?>"><?php echo "Administrador"?></option>
 											<?php
 										}
 									?>
@@ -54,11 +50,11 @@
 					<h3>Datos del usuario:</h3>
 				  <label for="atencion" class="col-md-1 control-label">Atendido por </label>
 				  <div class="col-md-3">
-					  <input type="text" class="form-control" id="atencion" placeholder=" <?php echo $_SESSION['firstname']; ?>" value=" <?php echo $_SESSION['firstname']; ?>" required readonly>
+					  <input type="text" class="form-control" id="atencion" placeholder=" <?php "Administrador"; ?>" value=" <?php echo "Administrador"; ?>" required readonly>
 				  </div>
 				  <label for="tel1" class="col-md-1 control-label">Correo: </label>
 							<div class="col-md-3">
-								<input type="text" class="form-control" id="tel1" placeholder="Correo"  value="<?php echo $_SESSION['user_email']; ?>" required readonly>
+								<input type="text" class="form-control" id="tel1" placeholder="Correo"  value="<?php echo "admin@intetel.com"; ?>" required readonly>
 							</div>
 
 				</div>

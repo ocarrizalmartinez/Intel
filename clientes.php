@@ -1,9 +1,5 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-        header("location: login.php");
-		exit;
-        }
 
 	require_once ("config/db.php");
 	require_once ("config/conexion.php");
@@ -35,7 +31,7 @@
 			<h4><i class='glyphicon glyphicon-search'></i> Buscar Clientes</h4>
 		</div>
 		<div class="panel-body">
-			
+
 			<?php
 				include("modal/registro_clientes.php");
 				include("modal/editar_clientes.php");

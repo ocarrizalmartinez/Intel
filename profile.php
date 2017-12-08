@@ -1,9 +1,5 @@
 <?php
-  session_start();
-  if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-      header("location: login.php");
-  exit;
-      }
+
 
       require_once ("config/db.php");
     	require_once ("config/conexion.php");
@@ -37,7 +33,7 @@
         <h1 class="title-pen"> perfil de usuario <span>Alpha System</span></h1>
         <div class="user-profile">
         	<img class="avatar" src="img/user.ico" alt="usuario" />
-            <div class="username"><?php echo $_SESSION['firstname']." (".$_SESSION['user_name'].")" ;?></div>
+            <div class="username"><?php echo "Administrador";?></div>
           <div class="bio">
           	administrador &  programador
           </div>

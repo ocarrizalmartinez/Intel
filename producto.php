@@ -1,9 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] != 1) {
-  	header("location: login.php");
-		exit;
-  }
+
 
 	require_once ("config/db.php");
 	require_once ("config/conexion.php");
@@ -22,8 +19,8 @@
 		$quantity=intval($_POST['quantity']);
 		$reference=mysqli_real_escape_string($con,(strip_tags($_POST["reference"],ENT_QUOTES)));
 		$id_producto=intval($_GET['id']);
-		$user_id=$_SESSION['user_id'];
-		$firstname=$_SESSION['firstname'];
+		$user_id=1;
+		$firstname="Administrador";
 		$nota="$firstname agregó $quantity producto(s) al inventario";
 		$fecha=date("Y-m-d H:i:s");
 

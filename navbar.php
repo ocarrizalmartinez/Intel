@@ -27,7 +27,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-				<li><i class='glyphicon glyphicon-user'></i><span> Bienvenido <?php echo $_SESSION['firstname']; ?></span></li>
+				<li><i class='glyphicon glyphicon-user'></i><span> Bienvenido <?php echo "Administrador"; ?></span></li>
 				<li><a href="login.php?logout"><i class='glyphicon glyphicon-off'></i> Salir</a></li>
       </ul>
     </div>

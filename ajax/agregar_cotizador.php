@@ -55,12 +55,12 @@ if (isset($_POST['precio_venta'])){$precio_venta=$_POST['precio_venta'];}
 
 		?>
 		<tr>
-			<td><? echo $codigo_producto;?></td>
-			<td><? echo $cantidad;?></td>
-			<td><? echo $nombre_producto.$marca_producto;?></td>
-			<td><span class="pull-right"><? echo $precio_venta_f;?></span></td>
-			<td><span class="pull-right"><? echo $precio_total_f;?></span></td>
-			<td ><span class="pull-right"><a href="#" onclick="eliminar('<? echo $id_tmp ?>')"><i class="glyphicon glyphicon-trash"></i></a></span></td>
+			<td><?php echo $codigo_producto;?></td>
+			<td><?php echo $cantidad;?></td>
+			<td><?php echo $nombre_producto.$marca_producto;?></td>
+			<td><span class="pull-right"><?php echo $precio_venta_f;?></span></td>
+			<td><span class="pull-right"><?php echo $precio_total_f;?></span></td>
+			<td ><span class="pull-right"><a href="#" onclick="eliminar('<?php echo $id_tmp ?>')"><i class="glyphicon glyphicon-trash"></i></a></span></td>
 		</tr>
 		<?php
 	}
@@ -68,7 +68,7 @@ if (isset($_POST['precio_venta'])){$precio_venta=$_POST['precio_venta'];}
 ?>
 <tr>
 	<td colspan=4><span class="pull-right">TOTAL $</span></td>
-	<td><span class="pull-right"><? echo number_format($sumador_total,2);?></span></td>
+	<td><span class="pull-right"><?php echo number_format($sumador_total,2);?></span></td>
 	<td></td>
 </tr>
 </table>
