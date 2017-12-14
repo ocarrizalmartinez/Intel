@@ -11,8 +11,6 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     if($_SESSION['user_login_status'] = 1){
       header("location: profile.php");
-    }elseif ($_SESSION['user_login_status'] = 2) {
-      header("location: hola.php");
     }
 } else {
 
@@ -26,7 +24,7 @@ if ($login->isUserLoggedIn() == true) {
 	<link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body style="background-color:#66ff99">
+<body style="background-color:#263a28">
  <div class="container">
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
